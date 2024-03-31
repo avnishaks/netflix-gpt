@@ -7,6 +7,9 @@
 5. Sing In Form
 6. Routing of App
 7. Form Validation and use of useRef Hook
+8. Firebase Set-up 
+9. Deploying the App to Production
+10. Create Sign Up in Firebase
 
 
 # Features : 
