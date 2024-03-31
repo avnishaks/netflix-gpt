@@ -4,6 +4,8 @@ import Background from './Background';
 import { checkValidData } from '../utils/validate';
 import { auth } from '../utils/firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function Login() {
@@ -13,6 +15,7 @@ export default function Login() {
     const email = useRef(null);
     const password = useRef(null);
     const name = useRef(null);
+    const navigate=useNavigate();
 
     const handleButtonClick = () => {
         const message = checkValidData(name.current ? name.current.value.trim() : '', email.current.value, password.current.value);
@@ -38,6 +41,8 @@ export default function Login() {
                     .then((userCredential) => {
                         const user = userCredential.user;
                         console.log(user);
+                        navigate("/browse")
+                        
                     })
                     .catch((error) => {
                         const errorCode = error.code;
@@ -52,6 +57,7 @@ export default function Login() {
                         // Signed in 
                         const user = userCredential.user;
                         console.log(user);
+                        navigate("/browse")
                     })
                     .catch((error) => {
                         const errorCode = error.code;
