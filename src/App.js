@@ -1,9 +1,11 @@
 import './App.css';
+import Body from './components/Body';
+
 
 export default function App() {
   return (
-    <h1 className="text-3xl font-sans font-bold text-green-400">
-      Namaste Everyone Lets build Netflix-GPT
-  </h1>
+    <div>
+        <Body/>
+    </div>
   );
 }
