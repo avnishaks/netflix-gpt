@@ -38,4 +38,4 @@
 
 # Live Project Link : 
 
-https://netflixgpt-330ac.web.app/
+Hosting URL: https://clonegpt-fc7cc.web.app
