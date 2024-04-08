@@ -26,12 +26,13 @@ export default function Body () {
     useEffect(()=>{
         onAuthStateChanged(auth, (user) => {
             if (user) {
-              const { uid, email, displayName } = user;
+              const { uid, email, displayName ,photoURL} = user;
               dispatch(
                 addUser({
                   uid: uid,
                   email: email,
-                  displayName: displayName
+                  displayName: displayName,
+                  photoURL: photoURL
                 })
               )
             } else {

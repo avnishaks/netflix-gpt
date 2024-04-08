@@ -11,8 +11,8 @@
 9. Deploying the App to Production
 10. Create Sign Up in Firebase
 11. Redux AppStore
-12. Sign out ( Pending )
-
+12. Sign out
+13. Update User Profile
 
 # Features : 
 

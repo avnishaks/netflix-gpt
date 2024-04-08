@@ -3,8 +3,11 @@ import Header from './Header';
 import Background from './Background';
 import { checkValidData } from '../utils/validate';
 import { auth } from '../utils/firebase';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword , updateProfile } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
+import {USER_AVATAR} from '../utils/constant';
+import { useDispatch } from 'react-redux';
+import { addUser } from '../utils/userSlice';
 
 
 
@@ -16,6 +19,7 @@ export default function Login() {
     const password = useRef(null);
     const name = useRef(null);
     const navigate=useNavigate();
+    const dispatch=useDispatch();
 
     const handleButtonClick = () => {
         const message = checkValidData(name.current ? name.current.value.trim() : '', email.current.value, password.current.value);
@@ -40,9 +44,22 @@ export default function Login() {
                 createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
                     .then((userCredential) => {
                         const user = userCredential.user;
-                        console.log(user);
-                        navigate("/browse")
-                        
+                        updateProfile(user, {
+                            displayName: name.current.value, photoURL: USER_AVATAR
+                          }).then(() => {
+                            const { uid, email, displayName ,photoURL} = auth.currentUser;
+                            dispatch(
+                              addUser({
+                                uid: uid,
+                                email: email,
+                                displayName: displayName,
+                                photoURL: photoURL
+                              })
+                            )
+                            navigate("/browse")
+                          }).catch((error) => {
+                            seterrorMessage(error.message)
+                          });
                     })
                     .catch((error) => {
                         const errorCode = error.code;
