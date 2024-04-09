@@ -18,7 +18,7 @@ export default function Login() {
     const email = useRef(null);
     const password = useRef(null);
     const name = useRef(null);
-    const navigate=useNavigate();
+    // const navigate=useNavigate();
     const dispatch=useDispatch();
 
     const handleButtonClick = () => {
@@ -56,7 +56,7 @@ export default function Login() {
                                 photoURL: photoURL
                               })
                             )
-                            navigate("/browse")
+                            // navigate("/browse")
                           }).catch((error) => {
                             seterrorMessage(error.message)
                           });
@@ -74,7 +74,7 @@ export default function Login() {
                         // Signed in 
                         const user = userCredential.user;
                         console.log(user);
-                        navigate("/browse")
+                        // navigate("/browse")
                     })
                     .catch((error) => {
                         const errorCode = error.code;
