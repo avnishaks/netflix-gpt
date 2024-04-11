@@ -21,3 +21,6 @@ export const API_OPTIONS = {
 export const NOW_PLAYING_GET_API= "https://api.themoviedb.org/3/movie/now_playing?page=1"
 
 export const TMDB_MOVIE_VIDEO_GET_API="https://api.themoviedb.org/3/movie/"+1011985+"/videos?language=en-US"
+
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500"
