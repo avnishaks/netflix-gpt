@@ -8,3 +8,16 @@ export const LOGO =
 
 export const USER_AVATAR =
   "https://occ-0-6247-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e";
+
+
+export const API_OPTIONS = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNzJkZmU0ZTcwYzk3YzhlOTVkNmQ1MWFhODg5MmJkYyIsInN1YiI6IjY2MTZjNjc0ZWI3OWMyMDE0YWE5Y2U5NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.FtGMZ5h2S4nRstUoDZaaz8UPY2Cx6oPpzgPigLtrUZA'
+    }
+  };
+
+export const NOW_PLAYING_GET_API= "https://api.themoviedb.org/3/movie/now_playing?page=1"
+
+export const TMDB_MOVIE_VIDEO_GET_API="https://api.themoviedb.org/3/movie/"+1011985+"/videos?language=en-US"

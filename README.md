@@ -13,6 +13,10 @@
 11. Redux AppStore
 12. Sign out
 13. Update User Profile
+14. Bug fix for the routing
+15. Unsubscribe to onAuthStateChange callback
+16. Register TMDB api and create react app
+17. Fetch the movie details from TMDB and also able to render the Trailer video
 
 # Features : 
 
