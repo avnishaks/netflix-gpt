@@ -19,6 +19,8 @@
 17. Fetch the movie details from TMDB and also able to render the Trailer video
 18. Build the secondary container with the movie list , create custom hook for popular movies.
 19. MovieList and MovieCard is done
+20. GPT Search Options
+21. Multi- Language supported 
 
 
 
