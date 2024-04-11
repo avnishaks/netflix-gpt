@@ -21,7 +21,7 @@
 19. MovieList and MovieCard is done
 20. GPT Search Options
 21. Multi- Language supported 
-
+22. Integrate OpenAPI with our GPTSearch 
 
 
 
