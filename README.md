@@ -49,4 +49,4 @@
 
 # Live Project Link : 
 
-Hosting URL: https://clonegpt-fc7cc.web.app
+Hosting URL: https://gptapp-ecb0a.web.app/
